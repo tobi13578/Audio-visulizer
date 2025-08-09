@@ -1,0 +1,6 @@
+html,body{margin:0;padding:0;background:#000;color:#fff;height:100%;overflow:hidden;font-family:system-ui,sans-serif}
+.ui{position:fixed;left:0;right:0;bottom:0;display:flex;gap:.5rem;flex-wrap:wrap;padding:.5rem;background:rgba(0,0,0,.4);backdrop-filter:blur(6px);align-items:center;z-index:10}
+.ui button,.ui select,.ui input[type=range]{font-size:16px;padding:.6rem 1rem;border-radius:12px;border:1px solid #555;background:#111;color:#eee}
+.ui label{color:#ddd;font-size:14px;display:flex;align-items:center;gap:.5rem}
+.notice{position:fixed;top:.5rem;left:50%;transform:translateX(-50%);color:#bbb;background:rgba(0,0,0,.5);padding:.4rem .7rem;border-radius:10px;font-size:14px;z-index:10}
+canvas{display:block}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Audio Reactive Visualizer</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icons/icon-512.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui" class="ui">
+    <button id="start">Start</button>
+    <input id="file" type="file" accept="audio/*">
+    <button id="mic">Mic</button>
+    <select id="preset">
+      <option value="mandala">Mandala</option>
+      <option value="particles">Partikel</option>
+      <option value="waves">Waves</option>
+    </select>
+    <label>Sens
+      <input id="sens" type="range" min="0.5" max="2.0" step="0.01" value="1.0">
+    </label>
+    <button id="fs">Fullscreen</button>
+    <button id="hide">UI aus</button>
+  </div>
+  <div id="notice" class="notice">Tippe auf „Start“, um Audio zu aktivieren.</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+    }
+  </script>
+</body>
+</html>
